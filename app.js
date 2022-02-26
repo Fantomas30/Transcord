@@ -1,7 +1,7 @@
 const http = require('http');
 const Discord = require('discord.js');
 const translate = require('@vitalets/google-translate-api');
-const token = require('./token.json');
+const token = os.getenv('DISCORD_TOKEN')
 
 const transReg = /(?:\s|^)([\a-zA-Z\-_]{2})?\?([\a-zA-Z\-_]{2})(\^*)([0-9]*)(?:\s|$)/
 const nameReg = /^<\**(.+?)\**>/;
